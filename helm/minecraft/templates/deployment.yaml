@@ -34,6 +34,8 @@ spec:
             value: {{ .Values.minecraft.gamemode }}
           - name: MOTD
             value: {{ .Values.minecraft.motd }}
+          - name: WHITE_LIST_USERS
+            value: {{ .Values.minecraft.whitelistusers }}
           - name: ALLOW_FLIGHT
             value: 'TRUE'
         ports:

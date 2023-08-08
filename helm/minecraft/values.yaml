@@ -4,21 +4,23 @@
 
 # ********REQUIRED********
 node:
-  hostname: 'dell3' # Your kube node's hostname
+  hostname: 'node1' # Your kube node's hostname
+  port: 32565 # Port nodeport
 # ************************
 
 minecraft:
   gamemode: 'survival'
   motd: 'Your super-cool, super-kube, minecraft server' # Message of the Day
   port: 25565
+  whitelistusers: "godtolo"
 
 volume:
-  storage: 3Gi
-  path: '/mnt/local-volumes/minecraft' # Path to wherever you want to save your worldfile
+  storage: 10Gi
+  path: '/home/kube-local-storage/minecraft' # Path to wherever you want to save your worldfile
 
 resources:
   limits:
-    memory: 2Gi
+    memory: 2.5Gi
   requests:
     memory: 1.5Gi
 

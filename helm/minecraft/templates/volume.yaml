@@ -11,7 +11,7 @@ spec:
   accessModes:
   - ReadWriteOnce
   persistentVolumeReclaimPolicy: Delete
-  storageClassName: local-storage
+  storageClassName: local-path
   local:
     path: {{ .Values.volume.path }} 
   nodeAffinity:
